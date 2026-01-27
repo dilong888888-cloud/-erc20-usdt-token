@@ -32,18 +32,22 @@
         }
         
         .logo {
-            width: 120px;
-            height: 120px;
-            background: #26A17B;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
             margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: white;
             box-shadow: 0 10px 30px rgba(38, 161, 123, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .logo img,
+        .logo svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         
         h1 {
@@ -157,16 +161,45 @@
             }
             
             .logo {
-                width: 100px;
-                height: 100px;
-                font-size: 40px;
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">USDT</div>
+        <div class="logo">
+            <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <!-- 外层深灰色边框 -->
+                <circle cx="128" cy="128" r="128" fill="#1a1a1a"/>
+                
+                <!-- 浅灰色边框 -->
+                <circle cx="128" cy="128" r="120" fill="#d3d3d3"/>
+                
+                <!-- 主绿色圆形背景 -->
+                <circle cx="128" cy="128" r="110" fill="#26A17B"/>
+                
+                <!-- 白色 T 字母 -->
+                <text x="128" y="155" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="white" text-anchor="middle">T</text>
+                
+                <!-- T 字母中间的椭圆环 -->
+                <ellipse cx="128" cy="120" rx="45" ry="12" fill="none" stroke="white" stroke-width="3"/>
+                
+                <!-- 右下角以太坊标志背景圆 -->
+                <circle cx="200" cy="200" r="35" fill="#2a2a2a"/>
+                
+                <!-- 以太坊标志（八面体钻石形状） -->
+                <g transform="translate(200, 200)">
+                    <!-- 外圈 -->
+                    <path d="M 0,-20 L 14,-7 L 14,7 L 0,20 L -14,7 L -14,-7 Z" fill="white" opacity="0.9"/>
+                    <!-- 内圈 -->
+                    <path d="M 0,-12 L 8,-4 L 8,4 L 0,12 L -8,4 L -8,-4 Z" fill="white" opacity="0.7"/>
+                    <!-- 中心 -->
+                    <circle cx="0" cy="0" r="3" fill="white"/>
+                </g>
+            </svg>
+        </div>
         <h1>ERC20-USDT Token</h1>
         <p class="subtitle">Advanced ERC20 Token with Logo and Metadata Support</p>
         
@@ -214,7 +247,7 @@
         
         <div class="links">
             <a href="https://etherscan.io/address/0xa7811C4F4D41a3Bd0058F120Ca564a3a6A71213e" target="_blank" class="link-button">View on Etherscan</a>
-            <a href="https://github.com/你的用户名/erc20-usdt-token" target="_blank" class="link-button">GitHub</a>
+            <a href="https://github.com/dilong888888-cloud/-erc20-usdt-token" target="_blank" class="link-button">GitHub</a>
         </div>
     </div>
     
